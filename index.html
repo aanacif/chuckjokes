@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<title>Chuck Norris Joke Generator</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./dist/style.css" />
+
+</head>
+
+<body>
+
+	<nav>
+		<img class="nav-logo" src="./app/assets/chuckLogoM.png" alt="chuckjokes">
+		<div class="links">
+			<a class="navlinks" href="http://www.icndb.com/" target="_blank">Database API</a>
+			<a class="navlinks" href="https://github.com/aanacif/chuckJokes" target="_blank">GitHub</a>
+		</div>
+		<div class="burger-menu-icon">
+			<a href="#" tabindex="0"><img src="./app/assets/icon-hamburger.svg" alt="mobile menu"></a>
+		</div>
+		<div class="burger-menu hide">
+			<a href="http://www.icndb.com/" target="_blank">Database API</a>
+			<a href="https://github.com/aanacif/chuckJokes" target="_blank">GitHub</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h1>Welcome to the Chuck Norris jokes generator!</h1>
+		<p class="disclaimer">Chuck Jokes is a website that allows the user to generate a list with
+			satirical factoids about American martial artist and actor Chuck Norris.</p>
+		<br>
+		<p class="disclaimer">He features in many great movies and has become an Internet phenomenon, widespread in
+			popular culture.</p>
+		<br>
+		<br>
+		<div class="wrapper">
+
+			<header>
+				<blockquote id="intro"></blockquote>
+			</header>
+
+			<main>
+
+				<p class="steps">Step 1. Select the amount of jokes</p>
+				<p class="steps">Step 2. (Optional) Select a category</p>
+				<p class="steps">Step 3. Click the "GENERATE" button.</p>
+
+				<form class="picknumber">
+					<p class="info"> type a number (1-99) or use up&down arrows</p>
+					<label for="number" class="number">List size (# of jokes)</label>
+					<input id="number" type="number" min="1" max="99" oninput="validity.valid||(value='');">
+					<p>Categories:</p>
+					<div id="categories">
+						<input id="nerdy" name="nerdy" type="checkbox" class="category"> Nerdy
+						<input id="explicit" name="explicit" type="checkbox" class="category"> Explicit
+					</div>
+
+					<button type="submit" class="btn-grad">Generate</button>
+				</form>
+
+				<div id="ticks"></div>
+
+
+			</main>
+
+			<ul role="list" class="jokelist"></ul>
+
+		</div>
+
+	</div>
+	<footer>
+		<div class="footer-content">
+			<p>Copyright &copy; 2021. All rights reserved.</p>
+			<a href="https://tagcity.netlify.app" target="_blank"> <img src="./app/assets/tagcity.png" alt="tagcity"></a>
+		</div>
+	</footer>
+
+	<script type="module" src="./app/js/script.js"></script>
+</body>
+
+</html>

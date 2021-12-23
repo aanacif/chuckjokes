@@ -1,0 +1,58 @@
+@use '../util' as *;
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #134e5e 0%,
+    #71b280 51%,
+    #134e5e 100%
+  );
+}
+.btn-grad {
+  display: block;
+  min-width: 90%;
+  margin-top: 3rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px rgb(236, 195, 195);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  &:focus-within {
+    outline: 3px dotted green;
+  }
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@keyframes rotate-forever {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-name: rotate-forever;
+  animation-timing-function: linear;
+  height: 20px;
+  width: 20px;
+  border: 2px solid rgb(231, 223, 223);
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}

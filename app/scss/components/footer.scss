@@ -1,0 +1,27 @@
+@use '../util' as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 1;
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100vw;
+    height: 5rem;
+
+    background-color: rgb(231, 223, 223);
+    @include for-phone-only {
+      flex-direction: column;
+      a:focus-within {
+        outline: 3px dotted green;
+      }
+      img {
+        transform: scale(0.7);
+      }
+    }
+  }
+}

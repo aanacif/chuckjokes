@@ -1,0 +1,19 @@
+@use "../util" as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(rem(310), 1fr);
+  grid-template-areas: "main" "jokelist";
+  @include for-tablet-portrait-up {
+    justify-content: center;
+    grid-template-columns: minmax(rem(375), 1fr);
+    grid-template-rows: rem(600) auto;
+    grid-template-areas: "main" "jokelist";
+  }
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, minmax(rem(375), 1fr));
+    grid-template-rows: rem(600);
+    grid-template-areas: "header main jokelist";
+    gap: 0.5rem;
+  }
+}
